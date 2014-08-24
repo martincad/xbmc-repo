@@ -17,7 +17,7 @@
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
     <forum></forum>
     <website>http://www.dathovpn.com</website>
-    <source></source>
+    <source>https://github.com/martincad/xbmc-repo/tree/master/plugin.program.datho.vpn</source>
     <email></email>
   </extension>
     <extension point="xbmc.addon.repository" name="Ruxton's XBMC Addon Repository">
