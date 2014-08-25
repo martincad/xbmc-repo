@@ -127,4 +127,4 @@ else:
 
 xbmcplugin.endOfDirectory(int(arguments[1]))
 
-# DEFAULT 0.3.0
+# This is for 0.3.1
