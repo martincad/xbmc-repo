@@ -14,7 +14,7 @@ from Queue import Queue
 
 import gui
 import config
-from utils import Logger
+from utils import Logger, GetPublicNetworkInformation
 import common
 
 class OpenVPNExeNotFoundException(Exception):
@@ -116,6 +116,10 @@ class VPNConnector:
         raise NotImplementedError("")
 
     def _connectionOkMessage(self):
+        networkInfo = GetPublicNetworkInformation()
+        if networkInfo:
+            ipAddress, country, city = networkInfo
+            return "VPN successfully enabled", "Your IP address is: %s" % ipAddress, "%s, %s" % (city.title(), country.title())
         return '%s VPN now enabled' % self._countryName, '', ''
 
     def _connectionFailedMessage(self):
